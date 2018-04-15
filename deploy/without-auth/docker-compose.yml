@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  dante:
+    container_name: dante
+    build: .
+    volumes:
+    - ./config/sockd.conf:/etc/sockd.conf
+    ports:
+    - 1080:1080
+    restart: always

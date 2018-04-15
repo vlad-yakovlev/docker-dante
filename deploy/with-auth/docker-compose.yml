@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  dante:
+    container_name: dante
+    build: .
+    volumes:
+    - ./config/sockd.conf:/etc/sockd.conf
+    - ./config/users.list:/etc/users.list
+    ports:
+    - 1080:1080
+    command: sh -c "bin/resotoreusers && sockd -N $$WORKERS"
+    restart: always

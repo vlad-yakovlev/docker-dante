@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+
+login="$1"
+password="$2"
+
+
+$BIN_DIR/deluser "$login"
+
+adduser -DH "$login" || true
+echo "$login:$password" | chpasswd
+
+echo "$login:$password" >> $USERS_LIST

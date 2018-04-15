@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+
+login="$1"
+
+user_list_tmp=$USERS_LIST.tmp
+
+
+deluser "$login" || true
+
+sed "/^$login:/d" $USERS_LIST > $user_list_tmp
+cat $user_list_tmp > $USERS_LIST
+rm $user_list_tmp

@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+
+for user in `cat $USERS_LIST`
+do
+    login=`echo "$user" | cut -d: -f1`
+    password=`echo "$user" | cut -d: -f2`
+
+    $BIN_DIR/createuser "$login" "$password"
+done
