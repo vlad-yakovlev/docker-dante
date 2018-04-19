@@ -1,3 +1,7 @@
+# Git
+.git
+
+# Project rules
 /config/
 /deploy/
 /docker-compose.yml
