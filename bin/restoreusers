@@ -6,5 +6,5 @@ do
     login=`echo "$user" | cut -d: -f1`
     password=`echo "$user" | cut -d: -f2`
 
-    $BIN_DIR/createuser "$login" "$password"
+    $BIN_DIR/adduser "$login" "$password"
 done
