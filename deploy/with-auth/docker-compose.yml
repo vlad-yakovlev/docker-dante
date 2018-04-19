@@ -9,5 +9,5 @@ services:
     - ./config/users.list:/etc/users.list
     ports:
     - 1080:1080
-    command: sh -c "bin/resotoreusers && sockd -N $$WORKERS"
+    command: sh -c "bin/restoreusers && sockd -N $$WORKERS"
     restart: always
