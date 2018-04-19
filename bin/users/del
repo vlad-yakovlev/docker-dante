@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+
+login="$1"
+
+
+$BIN_DIR/users/pam/del "$login"
+
+$BIN_DIR/users/list/del "$login"

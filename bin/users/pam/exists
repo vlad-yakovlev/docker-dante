@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+
+login="$1"
+
+
+grep -Eq "^$login:" /etc/passwd

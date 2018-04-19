@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+
+login="$1"
+password="$2"
+
+
+if ! $BIN_DIR/users/pam/exists "$login"; then
+	adduser -DH "$login"
+fi
+echo "$login:$password" | chpasswd

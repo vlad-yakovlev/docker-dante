@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+
+login="$1"
+password="$2"
+
+
+if ! $BIN_DIR/users/list/exists "$login"; then
+	echo "$login:$password" >> $USERS_LIST
+fi

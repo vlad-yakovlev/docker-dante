@@ -26,8 +26,8 @@ WORKDIR /usr/bin/app
 
 COPY . /usr/bin/app/
 
-ENV BIN_DIR /usr/bin/app/bin
-ENV USERS_LIST /etc/users.list
-ENV WORKERS 20
+ENV BIN_DIR=/usr/bin/app/bin \
+    USERS_LIST=/etc/users.list \
+    WORKERS=20
 
 CMD sockd -N $WORKERS

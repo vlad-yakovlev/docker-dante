@@ -1,10 +1,9 @@
 #!/usr/bin/env sh
 
 
-for user in `cat $USERS_LIST`
-do
+for user in `cat $USERS_LIST`; do
     login=`echo "$user" | cut -d: -f1`
     password=`echo "$user" | cut -d: -f2`
 
-    $BIN_DIR/adduser "$login" "$password"
+    $BIN_DIR/users/pam/add "$login" "$password"
 done
