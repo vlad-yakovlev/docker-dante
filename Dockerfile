@@ -28,4 +28,4 @@ ENV BIN_DIR=/usr/bin/app/bin \
     USERS_LIST=/etc/users.list \
     WORKERS=20
 
-CMD sockd -N $WORKERS
+CMD ["sockd", "-N", "$WORKERS"]
