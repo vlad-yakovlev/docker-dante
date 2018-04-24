@@ -1,12 +1,12 @@
 FROM alpine:3.7
 
 RUN apk add --no-cache \
-    curl \
-    gcc \
-    g++ \
-    make
+        curl \
+        gcc \
+        g++ \
+        make
 
-RUN mkdir -p /usr/src/dante && cd $_ && \
+RUN mkdir -p /usr/src/dante && cd /usr/src/dante && \
     curl -sL http://www.inet.no/dante/files/dante-1.4.2.tar.gz | tar -xzf - --strip 1 && \
     ac_cv_func_sched_setscheduler=no ./configure \
         --prefix=/usr \
